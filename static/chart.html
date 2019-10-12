@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+  
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"NYC Neighborhoods Average Prices"
+	},
+	axisX:{
+        interval: 2,
+        includeZero: false
+	},
+	axisY2:{
+        minimum:8.8,
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		
+	},
+	data: [{ //Converted reviewData.csv to JSON
+		type: "bar",
+		name: "neighborhoods",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			
+  {
+    y: 87.904072,
+    label: "Bronx"
+  },
+  {
+    y: 124.041663,
+    label: "Brooklyn"
+  },
+  {
+    y: 195.15828,
+    label: "Manhatten"
+  },
+  {
+    y: 99.417140,
+    label: "Queens"
+  },
+  {
+    y: 115.198413,
+    label: "Staten Island"
+  },
+		]
+	}]
+});
+chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 100%; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+  
+</script>
+</body>
+</html>
